@@ -1,1 +1,0 @@
-cmd_/home/krushna/eldd_labexam/eldd_exam/im.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/krushna/eldd_labexam/eldd_exam/im.ko /home/krushna/eldd_labexam/eldd_exam/im.o /home/krushna/eldd_labexam/eldd_exam/im.mod.o;  true
