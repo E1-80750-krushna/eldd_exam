@@ -1,5 +1,5 @@
 
-obj-m = ex.o
+obj-m = ex.o im.o
 
 modules:
 	make -C /lib/modules/`uname -r`/build M=`pwd` modules
