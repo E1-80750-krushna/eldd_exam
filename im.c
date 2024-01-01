@@ -1,10 +1,29 @@
 #include<linux/module.h>
+#include<linux/moduleparam.h>
 
 
 
  extern int var;
 
 void fun(void);
+int notify_change(const char *va, const struct kernel_param *kp)
+{
+	int res = param_set_int(va, kp);		// default callback
+	if(res == 0)
+	{
+		printk(KERN_INFO " var is called\n");
+		printk(KERN_INFO "new  value of var = %d\n", var);
+		return 0;
+	}
+	return -1;
+}
+
+struct kernel_param_ops var_ops = {
+	.set = &notify_change,		
+	.get = &param_get_int		
+};
+
+module_param_cb(var, &var_ops, &var, 0644);
 
 
 static __init int imp_init(void){

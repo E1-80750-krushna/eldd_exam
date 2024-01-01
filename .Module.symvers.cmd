@@ -1,0 +1,1 @@
+cmd_/home/krushna/eldd_labexam/eldd_exam/Module.symvers :=  sed 's/ko$$/o/'  /home/krushna/eldd_labexam/eldd_exam/modules.order | scripts/mod/modpost -m -a    -o /home/krushna/eldd_labexam/eldd_exam/Module.symvers -e -i Module.symvers -T - 

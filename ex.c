@@ -1,6 +1,9 @@
 #include<linux/module.h>
 
-int var = 80750;
+int var = 050;
+
+
+
 
 void fun(void)
 {
